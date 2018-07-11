@@ -26,7 +26,11 @@ class BankAccount{
 	public function setAccountNumber($accountNumber){
 		$this->accountNumber=$accountNumber;
 	}
-
+	public function __toString(){
+		return sprintf("Account #: %s <br/> Balance:$%0.2f",
+			$this->accountNumber,
+			$this->totalBalance);
+	}
 	
 }
 

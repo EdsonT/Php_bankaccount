@@ -9,5 +9,12 @@ class SavingAccount extends BankAccount{
 		$amount= parent::getBalance() = $this->interestRate/100;
 		$parent::deposit($amount);
 	}
+	public function __toString();
+	{
+		$str=parent::__toString();
+		$str.=sprintf("<br/>Interest rate:%0.2f",
+			$this->interestRate);
+		return $str;
+	}
 }
 
