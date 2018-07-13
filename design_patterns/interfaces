@@ -1,0 +1,6 @@
+<?php
+interface socialNetworkConnector{
+	public function logIn();
+	public function logOut();
+	public function createPost($content);
+}
